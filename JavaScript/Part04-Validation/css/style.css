@@ -1,0 +1,63 @@
+body
+{
+  background-color: #FFB612;
+  font-size: 1.5em;
+  max-width:100%;
+  width:1000px;
+}
+
+h1
+{
+	color: #203731;
+}
+
+.clearFix
+{
+  float: none;
+}
+
+label
+{
+  float:left;
+  width:10em;
+  margin-right: 1em;
+  text-align: right;
+  color: #203731;
+}
+
+input[type="text"],
+input[type="tel"],
+input[type="email"],
+input[type="number"],
+input[type="password"],
+input[type="datetime"],
+input[type="color"],
+input[type="url"],
+select
+{
+  width:300px;
+  margin-bottom: .5em;
+  font-size: .75em;
+}
+
+input[type="radio"],
+input[type="checkbox"]
+{
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+
+
+input[type="button"]
+{
+  width: 10em;
+  font-size: 1.25em;
+  color:#203731;
+}
+
+span
+{
+	font-weight: bold;
+	color: red;
+	margin-left: 5px;
+}

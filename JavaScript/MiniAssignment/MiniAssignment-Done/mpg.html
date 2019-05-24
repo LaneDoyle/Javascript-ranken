@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>JavaScript Trip Cost Calculator</title>
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<h1>JavaScript Trip Cost Calculator</h1>
+	<h2><span>NOTE: (*) Input Fields Are Mandatory!</span></h2>
+	
+		<form id="mpg_form" name="mpg_form" action="#" method="get">
+		<label for="miles">Miles Driven:</label>
+		<input type="text" id="miles" name="miles">
+		<span class="spaces">*</span><br><br>
+
+		<label for="gallons">Gallons Used:</label>
+		<input type="text" id="gallons" name="gallons">
+		<span class="spaces">*</span><br><br>
+
+		<label for="gallons">Price Per Gallon:</label>
+		<input type="text" id="ppg" name="ppg">
+		<span class="spaces">*</span><br><br><br>
+
+		<input	type="button"  class="firstbutton"
+				id="calculate" name="calculate" 
+				value="Calculate">
+		<input type="button" id="clear" name="clear" value="Clear"><br><br><br>
+		
+		<label for="mpg">MPG:</label>
+		<input type="text" id="mpg" disabled><br><br>
+
+		<label for="tripCost">Trip Cost:</label>
+		<input type="text" id="tripCost" disabled><br><br>
+
+		<label for="perMile">Cost Per Mile:</label>
+		<input type="text" id="perMile" disabled>
+	</form>
+    <script src="js/mpg.js"></script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<title>JavaScript Guessing Game</title>
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<h1>JavaScript Guessing Game</h1>
+	<h2><span>NOTE: (*) Input Field Is Mandatory!</span></h2>
+	
+	<form method="post" action="#">
+		<label for="guess">Guess:</label>
+		<input type="text" id="guess"><span class="spaces">*</span><br><br>
+		
+		<label for="guessStatus">Guess Status:</label>
+		<input type="text" id="guessStatus" disabled><br><br>
+		
+		<label>&nbsp;</label>
+		<input type="button" id="calculate" value="Check Guess">&nbsp;&nbsp;&nbsp;
+		<input type="button" id="reset" value="Reset Form">&nbsp;&nbsp;&nbsp;
+		<input type="button" id="newNumber" value="New Number"><br><br>
+	</form>
+	
+	<script src="js/guessingGame.js"></script>
+</body>
+</html>

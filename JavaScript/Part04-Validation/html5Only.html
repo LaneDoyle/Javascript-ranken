@@ -1,0 +1,229 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<title>HTML5 Only Form Validation</title>
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<h1>Form Validation - HTML5 Only (Part 01)</h1>
+	
+	<!--	
+			Maxlengths Set For The Following Fields:
+	
+			FIELD NAME						MAXLENGTH
+			=========================================
+			SSN									11
+			fname								50
+			lname								50
+			address								75
+			city								75
+			zip									10
+			cellphone							12
+			email							   100
+			password							25
+	-->
+	
+	<form method="get" action="">
+		<label for="ssn">Social Security Number:</label>
+		<input type="text"
+			   name="ssn"
+			   id="ssn"
+			   pattern="(^\d{3}-?\d{2}-?\d{4}$)"
+			   maxlength="11"
+			   placeholder="Format: nnn-nn-nnnn"
+			   required /><br>
+
+		<label for="fname">First Name:</label>
+		<input type="text"
+			   name="fname"
+			   id="fname"
+			   maxlength="50"
+			   placeholder="First Name (1 - 50 characters)"
+			   required /><br>
+
+		<label for="lname">Last Name:</label>
+		<input type="text"
+			   name="lname"
+			   id="lname"
+			   maxlength="50"
+			   placeholder="Last Name (1 - 50 characters)"
+			   required /><br>
+
+		<label for="address">Address:</label>
+		<input type="text"
+			   name="address"
+			   id="address"
+			   maxlength="75"
+			   placeholder="Address, e.g. 123 Main St."
+			   required /><br>
+
+		<label for="city">City:</label>
+		<input type="text"
+			   name="city"
+			   id="city"
+			   maxlength="75"
+			   placeholder="City, e.g. Wentzville"
+			   required /><br>
+
+		<label for="state">State:</label>
+		<select>
+			<option value="">Please Select Your State:</option>
+			<option value="AL">Alabama</option>
+			<option value="AK">Alaska</option>
+			<option value="AZ">Arizona</option>
+			<option value="AR">Arkansas</option>
+			<option value="CA">California</option>
+			<option value="CO">Colorado</option>
+			<option value="CT">Connecticut</option>
+			<option value="DE">Delaware</option>
+			<option value="DC">District Of Columbia</option>
+			<option value="FL">Florida</option>
+			<option value="GA">Georgia</option>
+			<option value="HI">Hawaii</option>
+			<option value="ID">Idaho</option>
+			<option value="IL">Illinois</option>
+			<option value="IN">Indiana</option>
+			<option value="IA">Iowa</option>
+			<option value="KS">Kansas</option>
+			<option value="KY">Kentucky</option>
+			<option value="LA">Louisiana</option>
+			<option value="ME">Maine</option>
+			<option value="MD">Maryland</option>
+			<option value="MA">Massachusetts</option>
+			<option value="MI">Michigan</option>
+			<option value="MN">Minnesota</option>
+			<option value="MS">Mississippi</option>
+			<option value="MO">Missouri</option>
+			<option value="MT">Montana</option>
+			<option value="NE">Nebraska</option>
+			<option value="NV">Nevada</option>
+			<option value="NH">New Hampshire</option>
+			<option value="NJ">New Jersey</option>
+			<option value="NM">New Mexico</option>
+			<option value="NY">New York</option>
+			<option value="NC">North Carolina</option>
+			<option value="ND">North Dakota</option>
+			<option value="OH">Ohio</option>
+			<option value="OK">Oklahoma</option>
+			<option value="OR">Oregon</option>
+			<option value="PA">Pennsylvania</option>
+			<option value="RI">Rhode Island</option>
+			<option value="SC">South Carolina</option>
+			<option value="SD">South Dakota</option>
+			<option value="TN">Tennessee</option>
+			<option value="TX">Texas</option>
+			<option value="UT">Utah</option>
+			<option value="VT">Vermont</option>
+			<option value="VA">Virginia</option>
+			<option value="WA">Washington</option>
+			<option value="WV">West Virginia</option>
+			<option value="WI">Wisconsin</option>
+			<option value="WY">Wyoming</option>
+		</select><br>
+
+		<label for="zip">Zip Code:</label>
+		<input type="text"
+			   name="zip"
+			   id="zip"
+			   pattern="(\d{5}([\-]\d{4})?)"
+			   maxlength="10"
+			   placeholder="Format: nnnnn or nnnnn-nnnn"
+			   required /><br>
+
+		<label for="cellphone">Cell Phone:</label>
+		<input type="tel"
+			   name="cellphone"
+			   id="cellphone"
+			   pattern="\d{3}[\-]\d{3}[\-]\d{4}"
+			   maxlength="12"
+			   placeholder="Format: nnn-nnn-nnnn"
+			   required /><br>
+		
+		<label for="email">Email Address:</label>
+		<input type="email"
+			   name="email"
+			   id="email"
+			   pattern="\A(?:[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*
+	| "(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21\x23-\x5b\x5d-\x7f]
+	| \\[\x01-\x09\x0b\x0c\x0e-\x7f])*")
+	@ (?:(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?
+	| \[(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}
+	(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?|[a-z0-9-]*[a-z0-9]:
+	(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21-\x5a\x53-\x7f]
+	| \\[\x01-\x09\x0b\x0c\x0e-\x7f])+)
+	\])\z"
+			   maxlength="100"
+			   placeholder="Format: hello@goodbye.com"
+			   required /><br>
+			   
+		<label for="shift">Desired Shift:</label>
+		<input type="radio" name="shift" value="morning"> Morning&nbsp;&nbsp;&nbsp;
+		<input type="radio" name="shift" value="afternoon"> Afternoon&nbsp;&nbsp;&nbsp;
+		<input type="radio" name="shift" value="evening"> Evening<br>
+		
+		<label for="contactvia">Contact Via:</label>
+		<input type="checkbox" name="contactvia" value="Email"> Email&nbsp;&nbsp;&nbsp;
+		<input type="checkbox" name="contactvia" value="Text"> Text&nbsp;&nbsp;&nbsp; 
+		<input type="checkbox" name="contactvia" value="Phone"> Phone<br>
+		
+		<label for="education">Highest Education:</label>
+		<input type="radio" name="education" value="highschool"> High School&nbsp;&nbsp;&nbsp;
+		<input type="radio" name="education" value="techcollege"> Tech College&nbsp;&nbsp;&nbsp;
+		<input type="radio" name="education" value="bachelors"> Bachelors&nbsp;&nbsp;&nbsp;
+		<input type="radio" name="education" value="masters"> Masters&nbsp;&nbsp;&nbsp;
+		<input type="radio" name="education" value="doctorate"> PhD<br>
+	
+		<label for="password">Password:</label>
+		<input type="password"
+			   name="password"
+			   id="password"
+			   maxlength="25"
+			   placeholder="10 - 25 characters"
+			   required /><br>
+			   
+		<label for="confirmpassword">Confirm Password:</label>
+		<input type="password"
+			   name="confirmpassword"
+			   id="confirmpassword"
+			   maxlength="25"
+			   placeholder="Must be the same as password"
+			   required /><br>
+			   
+		<label for="birthdate">Birthdate:</label>
+		<input type="datetime"
+			   name="birthdate"
+			   id="birthdate"
+			   placeholder="Date of Birth"
+			   required /><br>
+
+		<label for="favoritecolor">Favorite Color:</label>
+		<input type="color"
+			   name="favoritecolor"
+			   id="favoritecolor"
+			   placeholder="Favorite Color" /><br>
+
+		<label for="">Personal Website:</label>
+		<input type="url"
+			   name="personalwebsite"
+			   id="personalwebsite"
+			   placeholder="Personal Website" /><br>
+
+		<label for="ccnumber">Credit Card Number:</label>
+		<input type="number"
+			   name="ccnumber"
+			   id="ccnumber"
+			   placeholder="Credit Card Number" 
+			   required /><br><br>
+			   
+		<input type="submit"
+			   name="submit"
+			   id="submit"
+			   value="Submit" />&nbsp;&nbsp;&nbsp;&nbsp;
+
+		<input type="reset"
+			   name="reset"
+			   id="reset" 
+			   value="Reset" />
+	</form>
+</body>
+</html>
